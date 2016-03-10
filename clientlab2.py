@@ -10,7 +10,7 @@ recv_speed  = 1024
 # params: host address,location of file, name for output, type of file
 def downloadfile (host,image_adr,name,type):
 
-    request = 'GET ' + image_adr +' HTTP/1.1\r\nUser-Agent: trololo\r\nHost: '+host+'\r\n\r\n'    
+    request = 'GET ' + image_adr +' HTTP/1.1\r\nUser-Agent: Netscape Navigator 4.2\r\nHost: '+host+'\r\n\r\n'    
    
     s = socket()
     s.connect ((host,80))
@@ -51,9 +51,9 @@ def downloadfile (host,image_adr,name,type):
 #func params: keyword for searching, host address, size(only for picture), type of file
 def findfile (keyword,host,size,type):
     if type == 'music':
-        request = 'GET /search/?a=music&q=' + keyword +' HTTP/1.1\r\nUser-Agent: trololo\r\nHost: '+host+'\r\n\r\n' 
+        request = 'GET /search/?a=music&q=' + keyword +' HTTP/1.1\r\nUser-Agent: Netscape Navigator 4.2\r\nHost: '+host+'\r\n\r\n' 
     else:
-        request = 'GET /search/' + keyword +' HTTP/1.1\r\nUser-Agent: trololo\r\nHost: '+host+'\r\n\r\n'
+        request = 'GET /search/' + keyword +' HTTP/1.1\r\nUser-Agent: Netscape Navigator 4.2\r\nHost: '+host+'\r\n\r\n'
     
     s = socket()
     s.connect ((host,80))
